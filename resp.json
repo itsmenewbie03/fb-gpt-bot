@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-771RvKUK4JFr3UUB3RamtHCOYm2bv",
+    "object": "chat.completion",
+    "created": 1681908223,
+    "model": "gpt-3.5-turbo-0301",
+    "usage": {
+        "prompt_tokens": 12,
+        "completion_tokens": 103,
+        "total_tokens": 115
+    },
+    "choices": [
+        {
+            "message": {
+                "role": "assistant",
+                "content": "As an AI language model, I don't have a personal experience of love, but based on human interactions, love can be defined as a complex mix of emotions, behaviors, and beliefs characterized by deep affection, attachment, and care towards someone or something. It can manifest itself in different forms, such as the love between family members, friends, or romantic partners. Love is often described as an intense feeling of connection that brings joy, happiness, and fulfillment, but can also involve sacrifice, compromise, and pain."
+            },
+            "finish_reason": "stop",
+            "index": 0
+        }
+    ]
+}
