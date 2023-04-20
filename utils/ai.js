@@ -1,11 +1,11 @@
-// PLEASE ENTER YOUR API KEY HERE
-const OPENAI_API_KEY = 'ADD_YOUR_OPENAI_API_KEY_HERE';
+import * as dotenv from 'dotenv'
+dotenv.config();
 const chat_completion = async (message) => {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${OPENAI_API_KEY}`
+            'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
         },
         body: JSON.stringify({
             model: 'gpt-3.5-turbo',
@@ -19,8 +19,8 @@ const chat_completion = async (message) => {
 const ai = async (event, api, _) => {
     if (event.body !== undefined) {
         if (event.body.trim() !== "") {
-            // YOU MAY CHANGE THE `bot` to YOUR PREFERRED TRIGGER KEYWORD
-            if (/^bot\s/i.test(event.body)) {
+            const regex = new RegExp(`^${process.env.BOT_TRIGGER}\s`,'i')
+            if (regex.test(event.body)) {
                 let data = event.body.split(" ");
                 data.shift();
                 let resp = await chat_completion(data.join(" "))
