@@ -21,7 +21,7 @@ npm i
 ------------
 - We are now ready to start the bot
 ```bash
-node index.js
+npm run start
 ```
 
 ### Resources
