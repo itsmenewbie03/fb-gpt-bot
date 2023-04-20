@@ -1,5 +1,6 @@
 import * as dotenv from 'dotenv'
 dotenv.config();
+
 const chat_completion = async (message) => {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
@@ -21,12 +22,13 @@ const ai = async (event, api, _) => {
         if (event.body.trim() !== "") {
             const regex = new RegExp(`^${process.env.BOT_TRIGGER}\s`,'i')
             if (regex.test(event.body)) {
-                let data = event.body.split(" ");
+                const data = event.body.split(" ");
                 data.shift();
-                let resp = await chat_completion(data.join(" "))
+                const resp = await chat_completion(data.join(" "))
                 api.sendMessage(resp, event.threadID, event.messageID);
             }
         }
     }
 }
+
 export { chat_completion, ai }
