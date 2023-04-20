@@ -5,6 +5,7 @@
 
 ### Installation
 ------------
+> If you deploy this on replit skip the step below and proceed to [configuration](#configuraton "configuration")
 ```bash
 git clone https://github.com/itsmenewbie03/fb-gpt-bot
 cd fb-gpt-bot
