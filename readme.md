@@ -2,6 +2,11 @@
 ------------
  - This repo will allow you to easily deploy your own facebook chatbot (account not page) that will answer queries using **OpenAI's gpt-3.5-turbo model**
 
+### Requirements
+------------
+To deploy locally you need to install the following
+1.  [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git "git")
+2. [node](https://nodejs.org/en "node")
 
 ### Installation
 ------------
