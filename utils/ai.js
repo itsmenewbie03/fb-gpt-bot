@@ -29,4 +29,4 @@ const ai = async (event, api, _) => {
     api.sendMessage(resp, event.threadID, event.messageID);
 }
 
-export { chat_completion, ai }
+export { ai }
