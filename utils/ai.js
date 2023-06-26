@@ -20,7 +20,7 @@ const chat_completion = async (message) => {
 const ai = async (event, api, _) => {
     if (!event?.body?.trim()) return;
 
-    const regex = new RegExp(`^${process.env.BOT_TRIGGER}\s`, 'i')
+    const regex = new RegExp(`^${process.env.BOT_TRIGGER}\\s`, 'i')
     if (!regex.test(event.body)) return;
 
     const data = event.body.split(" ");
