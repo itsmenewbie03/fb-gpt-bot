@@ -14,7 +14,7 @@ const chat_completion = async (message) => {
         })
     }).then(res => res.json());
     const reply = response?.choices?.[0]?.message?.content;
-    return reply ? reply.trim() : '❎ Failed to get response';
+    return reply ? reply.trim() : response?.error.message ?? '❎ Failed to get response';
 };
 
 const ai = async (event, api, _) => {
