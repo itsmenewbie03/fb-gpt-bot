@@ -22,7 +22,7 @@ npm i
 ------------
 - After installing all the dependecies edit the .env file or if you are on replit edit the **[secrets](https://docs.replit.com/programming-ide/workspace-features/storing-sensitive-information-environment-variables "secrets")**
 - Get your OPENAI_API_KEY **[here](https://platform.openai.com/account/api-keys "here")**, if you do not have an account just signup for one.
-- The BOT_TRIGGER will trigger the bot to answer by default it is **bot** but you can change it to what you like
+- The BOT_TRIGGER will trigger the bot to answer by default it is **`zuck`** but you can change it to what you like
 - Paste your fb state contents to the appstate.json, you can generate it **[here](https://github.com/c3cbot/c3c-fbstate "here")**
 
 ### Starting
